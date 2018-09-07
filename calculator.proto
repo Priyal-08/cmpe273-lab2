@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package calculator;
+
+// The calculator service definition.
+service Calculator {
+  // Sends addition response
+  rpc Add (AddRequest) returns (AddResponse) {}
+}
+
+// The request message containing the parameters to be added.
+message AddRequest {
+  int32 param1 = 1;
+  int32 param2 = 2;
+}
+
+// The response message containing the result of addition.
+message AddResponse {
+  int32 addResult= 1;
+}
